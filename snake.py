@@ -68,6 +68,7 @@ while True:
     if snake[-1][0]>30 or snake[-1][0]<0 or snake[-1][1]>30 or snake[-1][1]<0:
         pygame.quit()
         sys.exit()
+        
     pygame.display.set_caption(f"🐍 Score: {score}")
     pygame.display.update()
     clock.tick(3)
