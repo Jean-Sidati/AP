@@ -51,11 +51,16 @@ while True:
         sys.exit()
     snake.append(tete2)
     snake.pop(0)
+    red = random.randint(0, 255)
+    green = random.randint(0, 255)
+    blue = random.randint(0, 255)
+    color = [red, green, blue]
     for i in range(30):
         x = 20 * i
         for j in range(30):
             y = 20 * j
             rect = [x, y, width, height]
+            
             pygame.draw.rect(screen, Blanc, rect)
 
     for part in snake:
@@ -72,7 +77,8 @@ while True:
     if snake[-1][0] > 30 or snake[-1][0] < 0 or snake[-1][1] > 30 or snake[-1][1] < 0:
         pygame.quit()
         sys.exit()
-
+    if fruit in snake:
+        fruit = [random.randint(0, 29), random.randint(0, 29)]
     pygame.display.set_caption(f"🐍 Score: {score}")
     pygame.display.update()
     clock.tick(3)
