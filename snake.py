@@ -51,17 +51,17 @@ while True:
         sys.exit()
     snake.append(tete2)
     snake.pop(0)
-    red = random.randint(0, 255)
-    green = random.randint(0, 255)
-    blue = random.randint(0, 255)
-    color = [red, green, blue]
+    
     for i in range(30):
         x = 20 * i
         for j in range(30):
             y = 20 * j
             rect = [x, y, width, height]
-            
-            pygame.draw.rect(screen, Blanc, rect)
+            red = random.randint(0, 255)
+            green = random.randint(0, 255)
+            blue = random.randint(0, 255)
+            color = [red, green, blue]
+            pygame.draw.rect(screen, color, rect)
 
     for part in snake:
         rect = [part[0] * 20, part[1] * 20, width, height]
