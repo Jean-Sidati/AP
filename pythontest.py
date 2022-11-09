@@ -36,8 +36,8 @@ while True:
                 blue = random.randint(0, 255)
                 color = [red, green, blue]
                 pygame.draw.rect(screen, color, rect)
-            pygame.display.update()
-            clock.tick(0)
+    pygame.display.update()
+    clock.tick(0)
 
     
     
